@@ -1,14 +1,5 @@
-# jQuery.qrcode
-
-[![license][license-img]][github] [![web][web-img]][web] [![github][github-img]][github] [![bower][bower-img]][github]
-
-jQuery plugin to dynamically generate QR codes. Uses [QR Code Generator][qrcode] (MIT).
-
-
-## License
-The MIT License (MIT)
-
-Copyright (c) 2016 Lars Jung (https://larsjung.de)
+Copyright SpryMedia Limited and other contributors
+http://datatables.net
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,14 +18,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-[web]: https://larsjung.de/qrcode/
-[github]: https://github.com/lrsjng/jquery-qrcode
-
-[license-img]: https://img.shields.io/badge/license-MIT-a0a060.svg?style=flat-square
-[web-img]: https://img.shields.io/badge/web-larsjung.de/qrcode-a0a060.svg?style=flat-square
-[github-img]: https://img.shields.io/badge/github-lrsjng/jquery--qrcode-a0a060.svg?style=flat-square
-[bower-img]: https://img.shields.io/badge/bower-lrsjng/jquery--qrcode-a0a060.svg?style=flat-square
-
-[qrcode]: https://github.com/kazuhikoarase/qrcode-generator

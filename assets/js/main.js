@@ -3,27 +3,17 @@ $(function () {
 	var worldElement = $(worldSelector);
 	var chartWorldTotalCases = [];
 	var chartWorldActiveCases = [];
+	var tableData = [];
 
 	$.ajax({
 		url: "https://covid-19.dataflowkit.com/v1"
 	}).done(function(countries) {
 		worldElement.html('');
 		worldElement.append(
-			'<table class="table table-bordered">' +
-			'  <thead>' +
-			'	<tr>' +
-			'	  <th>Country</th>' +
-			'	  <th>Total cases</th>' +
-			'	  <th>Active cases</th>' +
-			'	  <th>New cases</th>' +
-			'	  <th>New deaths</th>' +
-			'	  <th>Total deaths</th>' +
-			'	  <th>Total recovered</th>' +
-			'	</tr>' +
-			'  </thead>' +
-			'  <tbody/>' +
-			'</table>'
+			'<table id="countries-data" class="table table-bordered"></table>'
 		);
+
+
 		$.each(countries, function(index, country) {
 			if (typeof country['Country_text'] !== 'undefined' && country['Country_text'] !== 'World') {
 				var countryName = country['Country_text'];
@@ -48,19 +38,31 @@ $(function () {
 					});
 				}
 				
-
-				worldElement.find('table tbody').append(
-					'<tr>' +
-					'  <td class="text-left">' + countryName + '</td>' +
-					'  <td class="text-right">' + totalCases + '</td>' +
-					'  <td class="text-right">' + activeCases + '</td>' +
-					'  <td class="text-right">' + newCases + '</td>' +
-					'  <td class="text-right">' + newDeaths + '</td>' +
-					'  <td class="text-right">' + totalDeaths + '</td>' +
-					'  <td class="text-right">' + totalRecovered + '</td>' +
-					'</tr>'
-				);
+				tableData.push([
+					countryName,
+					totalCases,
+					activeCases,
+					newCases,
+					newDeaths,
+					totalDeaths,
+					totalRecovered
+				]);
 			}
+		});
+
+		$('#countries-data').DataTable({
+			"columns": [
+				{ "title": "Country"},
+				{ "title": "Total cases"},
+				{ "title": "Active cases"},
+				{ "title": "New cases"},
+				{ "title": "New deaths"},
+				{ "title": "Total deaths"},
+				{ "title": "Total recovered"}
+			],
+			"data": tableData,
+			"lengthMenu": [[-1, 100 , 50, 25, 10], ["All", 100, 50, 25, 10]],
+			"order": [[ 1, "desc" ]]
 		});
 
 		Highcharts.chart('chart-world-total-cases', {

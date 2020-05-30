@@ -15,6 +15,9 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 
+	<!-- DataTables -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css"/>
+
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="assets/css/main.css?v=1-0-0">
 
@@ -35,36 +38,52 @@
 				<small>v1.0.0</small>
 			</h1>
 		</div>
-		<div class="col-lg-12 col-md-12 col-sm-12">
-			<div class="panel panel-info">
-				<div class="panel-heading text-center clearfix">
-					<div class="form-group col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-12">
-						<h2>World</h2>
+
+		<div class="row">
+			<div class="col col-lg-6">
+				<div class="panel panel-info">
+					<div class="panel-heading text-center clearfix">
+						<h2>Total cases</h2>
 					</div>
-				</div>			
-				<div class="panel-body text-center">
-					<div class="container">
-						<div class="row">
-							<div class="col col-lg-6">
-								<div id="chart-world-total-cases"></div>
-							</div>
-							<div class="col col-lg-6">
-								<div id="chart-world-active-cases"></div>
-							</div>
+					<div class="panel-body text-center">
+						<div id="chart-world-total-cases"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col col-lg-6">
+				<div class="panel panel-info">
+					<div class="panel-heading text-center clearfix">
+						<h2>Active cases</h2>
+					</div>
+					<div class="panel-body text-center">
+						<div id="chart-world-active-cases"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col col-lg-12">
+				<div class="panel panel-info">
+					<div class="panel-heading text-center clearfix">
+						<div class="form-group col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-12">
+							<h2>Countries</h2>
 						</div>
 					</div>
-					<div id="world"></div>
+					<div class="panel-body text-center">
+						<div id="world"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<footer>
 		<div class="container">
+			<hr />
 			<div class="pull-left">
 				<span>Powered by:</span>
 				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="http://fontawesome.io/icons/" title="Font Awesome 4.7.0">FontAwesome</a>
 				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="http://getbootstrap.com/" title="Bootstrap">Bootstrap</a>
 				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="https://jquery.com/" title="jQuery">jQuery</a>
+				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="https://datatables.net/" title="Add advanced interaction controls to your HTML tables the free and easy way">DataTables</a>
 				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="https://www.highcharts.com/" title="Interactive JavaScript charts for your webpage">Highcharts</a>
 			</div>
 			<div class="pull-right">
@@ -81,6 +100,8 @@
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<!-- highcharts.src.js -->
 	<script src="bower_components/highcharts/highcharts.src.js"></script>
+	<!-- jquery.dataTables.min.js -->
+	<script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 	<!-- main.js -->
 	<script src="assets/js/main.js"></script>
   </body>
