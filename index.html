@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Covid 19 data visualizer</title>
+	<meta name="description" content="Visualize Covid 19 data">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+	<!-- Bootstrap -->
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="assets/css/main.css?v=1-0-0">
+
+	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+  </head>
+  <body>
+	<div class="container">
+		<div class="page-header">
+			<h1>
+				<i class="fa fa-fw fa-thermometer-full text-danger" aria-hidden="true"></i>
+				Covid 19 data visualizer 
+				<small>v1.0.0</small>
+			</h1>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading text-center clearfix">
+					<div class="form-group col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-12">
+						<h2>World</h2>
+					</div>
+				</div>			
+				<div class="panel-body text-center">
+					<div class="container">
+						<div class="row">
+							<div class="col col-lg-6">
+								<div id="chart-world-total-cases"></div>
+							</div>
+							<div class="col col-lg-6">
+								<div id="chart-world-active-cases"></div>
+							</div>
+						</div>
+					</div>
+					<div id="world"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="pull-left">
+				<span>Powered by:</span>
+				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="http://fontawesome.io/icons/" title="Font Awesome 4.7.0">FontAwesome</a>
+				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="http://getbootstrap.com/" title="Bootstrap">Bootstrap</a>
+				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="https://jquery.com/" title="jQuery">jQuery</a>
+				<i class="fa fa-hashtag" aria-hidden="true"></i><a target="_blank" href="https://www.highcharts.com/" title="Interactive JavaScript charts for your webpage">Highcharts</a>
+			</div>
+			<div class="pull-right">
+				<span>Created by:</span>
+				<a target="_blank" class="btn btn-gunis" href="http://gunis.sk" title="gunis | sk * Freelancer &amp; Webdeveloper">Juraj Guniš</a>
+				<a target="_blank" class="btn btn-xs btn-default" href="https://sk.linkedin.com/in/gunisj" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a target="_blank" class="btn btn-xs btn-default" href="https://twitter.com/gunisj" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a target="_blank" class="btn btn-xs btn-default" href="https://github.com/gunis" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- jquery.min.js -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- highcharts.src.js -->
+	<script src="bower_components/highcharts/highcharts.src.js"></script>
+	<!-- main.js -->
+	<script src="assets/js/main.js"></script>
+  </body>
+</html>
