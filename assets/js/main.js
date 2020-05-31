@@ -61,7 +61,7 @@ $(function () {
 				{ "title": "Total recovered"}
 			],
 			"data": tableData,
-			"lengthMenu": [[-1, 100 , 50, 25, 10], ["All", 100, 50, 25, 10]],
+			"lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
 			"order": [[ 1, "desc" ]]
 		});
 
