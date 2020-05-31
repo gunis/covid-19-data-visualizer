@@ -38,38 +38,52 @@
 				<small>v1.0.0</small>
 			</h1>
 		</div>
-
+		<hr />
 		<div class="row">
 			<div class="col col-lg-6">
-				<div class="panel panel-info">
-					<div class="panel-heading text-center clearfix">
+				<div class="card border-secondary">
+					<div class="card-header text-white bg-secondary text-center clearfix">
 						<h2>Total cases</h2>
 					</div>
-					<div class="panel-body text-center">
-						<div id="chart-world-total-cases"></div>
+					<div class="card-body text-center">
+						<div id="chart-world-total-cases">
+							<div class="spinner-grow spinner-grow-sm" role="status">
+							  <span class="sr-only">Loading...</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col col-lg-6">
-				<div class="panel panel-info">
-					<div class="panel-heading text-center clearfix">
+				<div class="card border-secondary">
+					<div class="card-header text-white bg-secondary text-center clearfix">
 						<h2>Active cases</h2>
 					</div>
-					<div class="panel-body text-center">
-						<div id="chart-world-active-cases"></div>
+					<div class="card-body text-center">
+						<div id="chart-world-active-cases">
+							<div class="spinner-grow spinner-grow-sm" role="status">
+							  <span class="sr-only">Loading...</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-
+		</div>
+		<hr />
+		<div class="row">
 			<div class="col col-lg-12">
-				<div class="panel panel-info">
-					<div class="panel-heading text-center clearfix">
+				<div class="card border-secondary">
+					<div class="card-header text-white bg-secondary text-center clearfix">
 						<div class="form-group col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-12">
 							<h2>Countries</h2>
 						</div>
 					</div>
-					<div class="panel-body text-center">
-						<div id="world"></div>
+					<div class="card-body text-center">
+						<div id="world" class="table-responsive-xl">
+							<div class="spinner-grow spinner-grow-sm" role="status">
+							  <span class="sr-only">Loading...</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
