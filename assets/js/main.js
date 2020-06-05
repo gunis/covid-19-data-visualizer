@@ -4,7 +4,9 @@ $(function () {
 	var chartWorldTotalCases = [];
 	var chartWorldActiveCases = [];
 	var tableData = [];
+	var lastDataUpdate;
 
+	$("#last-data-update-alert").hide();
 	$.ajax({
 		url: "https://covid-19.dataflowkit.com/v1"
 	}).done(function(countries) {
@@ -47,6 +49,9 @@ $(function () {
 					totalDeaths,
 					totalRecovered
 				]);
+			}
+			else if (typeof country['Country_text'] !== 'undefined' && country['Country_text'] === 'World') {
+				lastDataUpdate = country['Last Update'];
 			}
 		});
 
@@ -139,6 +144,11 @@ $(function () {
 				colorByPoint: true,
 				data: chartWorldActiveCases
 			}]
+		});
+
+		$('#last-data-update').text(lastDataUpdate);
+		$("#last-data-update-alert").fadeTo(2000, 500).slideUp(500, function(){
+			$("#last-data-update-alert").slideUp(500);
 		});
 	});
 });
