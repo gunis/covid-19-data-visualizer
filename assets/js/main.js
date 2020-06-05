@@ -78,8 +78,11 @@ $(function () {
 				type: 'pie',
 				backgroundColor: 'rgba(0,0,0,0)'
 			},
-			title: {
-				text: 'Total cases'
+			title : {
+				text: null,
+				style : {
+					display : 'none'
+				}
 			},
 			tooltip: {
 				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -116,8 +119,11 @@ $(function () {
 				type: 'pie',
 				backgroundColor: 'rgba(0,0,0,0)'
 			},
-			title: {
-				text: 'Active cases'
+			title : {
+				text: null,
+				style : {
+					display : 'none'
+				}
 			},
 			tooltip: {
 				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
