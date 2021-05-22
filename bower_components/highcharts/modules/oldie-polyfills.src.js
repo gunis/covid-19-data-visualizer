@@ -1,9 +1,9 @@
 /**
- * @license Highcharts JS v8.1.0 (2020-05-05)
+ * @license Highcharts JS v9.1.0 (2021-05-04)
  *
  * Old IE (v6, v7, v8) array polyfills for Highcharts v7+.
  *
- * (c) 2010-2019 Highsoft AS
+ * (c) 2010-2021 Highsoft AS
  * Author: Torstein Honsi
  *
  * License: www.highcharts.com/license
@@ -29,10 +29,10 @@
             obj[path] = fn.apply(null, args);
         }
     }
-    _registerModule(_modules, 'modules/oldie-polyfills.src.js', [], function () {
+    _registerModule(_modules, 'Extensions/OldiePolyfills.js', [], function () {
         /* *
          *
-         *  (c) 2010-2020 Torstein Honsi
+         *  (c) 2010-2021 Torstein Honsi
          *
          *  License: www.highcharts.com/license
          *
@@ -45,6 +45,11 @@
          * */
         /* global document */
         /* eslint-disable no-extend-native */
+        if (!String.prototype.trim) {
+            String.prototype.trim = function () {
+                return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+            };
+        }
         if (!Array.prototype.forEach) {
             Array.prototype.forEach = function (fn, thisArg) {
                 var i = 0,
@@ -141,6 +146,24 @@
                     return thatFunc.apply(thatArg, funcArgs);
                 };
             };
+        }
+        // Adapted from https://johnresig.com/blog/objectgetprototypeof/
+        if (!Object.getPrototypeOf) {
+            if (typeof 'test'.__proto__ === 'object') { // eslint-disable-line no-proto
+                Object.getPrototypeOf = function (object) {
+                    return object.__proto__; // eslint-disable-line no-proto
+                };
+            }
+            else {
+                Object.getPrototypeOf = function (object) {
+                    var proto = object.constructor.prototype;
+                    if (proto === object) {
+                        return {}.constructor.prototype;
+                    }
+                    // May break if the constructor has been tampered with
+                    return proto;
+                };
+            }
         }
         if (!Object.keys) {
             Object.keys = function (obj) {

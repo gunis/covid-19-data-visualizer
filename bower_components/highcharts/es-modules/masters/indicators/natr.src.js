@@ -1,14 +1,14 @@
 /**
- * @license Highstock JS v8.1.0 (2020-05-05)
+ * @license Highstock JS v9.1.0 (2021-05-04)
  * @module highcharts/indicators/natr
  * @requires highcharts
  * @requires highcharts/modules/stock
  *
- * Indicator series type for Highstock
+ * Indicator series type for Highcharts Stock
  *
- * (c) 2010-2019 Paweł Dalek
+ * (c) 2010-2021 Paweł Dalek
  *
  * License: www.highcharts.com/license
  */
 'use strict';
-import '../../indicators/natr.src.js';
+import '../../Stock/Indicators/NATR/NATRIndicator.js';

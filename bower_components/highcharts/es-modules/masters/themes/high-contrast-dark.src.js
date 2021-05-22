@@ -1,11 +1,11 @@
 /**
- * @license Highcharts JS v8.1.0 (2020-05-05)
+ * @license Highcharts JS v9.1.0 (2021-05-04)
  * @module highcharts/themes/high-contrast-dark
  * @requires highcharts
  *
- * (c) 2009-2019 Highsoft AS
+ * (c) 2009-2021 Highsoft AS
  *
  * License: www.highcharts.com/license
  */
 'use strict';
-import '../../themes/high-contrast-dark.js';
+import '../../Extensions/Themes/HighContrastDark.js';

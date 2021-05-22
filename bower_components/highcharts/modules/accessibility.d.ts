@@ -61,6 +61,10 @@ declare module "../highcharts" {
          * Provide a description of the data point, announced to screen readers.
          */
         description?: string;
+        /**
+         * Enable or disable exposing the point to assistive technology
+         */
+        enabled?: boolean;
     }
     interface PointOptionsObject {
         accessibility?: PointAccessibilityOptionsObject;
@@ -186,25 +190,6 @@ declare module "../highcharts" {
      */
     function i18nFormat(formatString: string, context: Dictionary<any>, chart: Chart): string;
     /**
-     * Add hook to destroy focus border if SVG element is destroyed, unless hook
-     * already exists.
-     *
-     * @param el
-     *        Element to add destroy hook to
-     */
-    function addDestroyFocusBorderHook(el: any): void;
-    /**
-     * Add hooks to update the focus border of an element when the element
-     * size/position is updated, unless already added.
-     *
-     * @param el
-     *        Element to add update hooks to
-     *
-     * @param updateParams
-     *        Parameters to pass through to addFocusBorder when updating.
-     */
-    function addUpdateFocusBorderHooks(el: any, updateParams: any): void;
-    /**
      * If we have a clear root option node for old and new options and a mapping
      * between, we can use this generic function for the copy and warn logic.
      */
@@ -216,24 +201,32 @@ declare module "../highcharts" {
      *        The series to add info on.
      */
     function describeSeries(series: Series): void;
+    /**
+     * Return string with the axis name/title.
+     */
     function getAxisDescription(axis: Axis): string;
+    /**
+     * Describe an axis from-to range.
+     */
+    function getAxisFromToDescription(axis: Axis): string;
+    /**
+     * Return string with text description of the axis range.
+     *
+     * @param axis
+     *        The axis to get range desc of.
+     *
+     * @return A string with the range description for the axis.
+     */
+    function getAxisRangeDescription(axis: Axis): string;
+    /**
+     * Describe the length of the time window shown on an axis.
+     */
+    function getAxisTimeLengthDesc(axis: Axis): string;
+    /**
+     * Describe the range of a category axis.
+     */
+    function getCategoryAxisRangeDesc(axis: Axis): string;
     function getChartTitle(): string;
-    /**
-     * Remove hook from SVG element added by addDestroyFocusBorderHook, if
-     * existing.
-     *
-     * @param el
-     *        Element to remove destroy hook from
-     */
-    function removeDestroyFocusBorderHook(el: any): void;
-    /**
-     * Remove hooks from SVG element added by addUpdateFocusBorderHooks, if
-     * existing.
-     *
-     * @param el
-     *        Element to remove update hooks from
-     */
-    function removeUpdateFocusBorderHooks(el: any): void;
 }
 export default factory;
 export let Highcharts: typeof _Highcharts;

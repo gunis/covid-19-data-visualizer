@@ -1,14 +1,14 @@
 /**
- * @license Highcharts JS v8.1.0 (2020-05-05)
+ * @license Highcharts JS v9.1.0 (2021-05-04)
  * @module highcharts/modules/timeline
  * @requires highcharts
  *
  * Timeline series
  *
- * (c) 2010-2019 Highsoft AS
+ * (c) 2010-2021 Highsoft AS
  * Author: Daniel Studencki
  *
  * License: www.highcharts.com/license
  */
 'use strict';
-import '../../modules/timeline.src.js';
+import '../../Series/Timeline/TimelineSeries.js';
